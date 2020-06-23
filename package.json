@@ -2,6 +2,7 @@
   "name": "snake",
   "version": "0.1.0",
   "private": true,
+  "homepage":"http://MosheSommers.github.io/snake",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@testing-library/jest-dom": "^4.2.4",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^16.9.34"
+    "@types/react": "^16.9.34",
+    "gh-pages": "^3.1.0"
   }
 }
