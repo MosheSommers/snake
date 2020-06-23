@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let open = true;
+        const toggleOpen = () => {
+            const myBox = document.getElementById('myBox');
+            const myBox2 = document.getElementById('myBox2')
+            const addRemove = myBox.classList.contains('closed') ? 'remove' : 'add';
+            myBox.classList[addRemove]('closed');
+            myBox2.classList[addRemove]('closed');
+        }
+        window.onload = () => {
+            setInterval(() => {
+                console.log(1);
+                toggleOpen();
+            },500)
+        }
+    </script>
+    <style>
+        div{
+            height:25px;
+            width:50px;
+        }
+        #myBox{  
+            border-top: 1px solid;  
+            background: linear-gradient(205deg, black 50%, yellow 25%);
+            
+        }
+        #myBox2{ 
+            border-bottom: 1px solid;
+            background: linear-gradient(-25deg, black 50%, yellow 25%);        
+        }
+        #myBox.closed{
+            background: linear-gradient(-25deg, black 50%, yellow 25%);
+        }
+        #myBox2.closed{
+            background: linear-gradient(205deg, black 50%, yellow 25%);
+        }    
+        </style>
+</head>
+<body>
+    <div id="myBox"></div>
+    <div id="myBox2"></div>
+</body>
+</html>
